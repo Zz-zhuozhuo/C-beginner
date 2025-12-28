@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "C/C++: g++.exe build active file",  // 需与lauch.json中"preLaunchTask"项命名一致
+			"command": "\"D:\\dev\\MinGW\\bin\\gcc.exe\"",    //需要修改成自己的gcc.exe所在路径，这个可执行文件在mingw-w64下面的bin里面，就是刚才添加到系统环境变量里的bin
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"  // 输出exe名，要与launch中调用的program项命名一致
+			],
+			"options": {
+				"cwd": "D:\\dev\\MinGW\\bin"   // 需要修改成自己的gcc.exe所在路径的bin目录
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
