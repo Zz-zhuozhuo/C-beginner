@@ -1,0 +1,14 @@
+# 1. 回到项目根目录
+$ cd "/d/dev/remote bank code"
+
+# 2. 更新本地仓库
+$ git pull origin main
+
+# 3. 添加 homework6 文件夹
+$ git add code/c/homework6/
+
+# 4. 提交
+$ git commit -m "添加C语言第六次作业到 code/c/homework6"
+
+# 5. 推送
+$ git push origin main
